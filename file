@@ -1,0 +1,101 @@
+Name:           pi
+Namespace:      default
+Selector:       controller-uid=c86434d7-64c3-11e8-984a-06ce8005a0fc
+Labels:         controller-uid=c86434d7-64c3-11e8-984a-06ce8005a0fc
+                job-name=pi
+Annotations:    <none>
+Parallelism:    1
+Completions:    1
+Start Time:     Thu, 31 May 2018 11:14:27 +0000
+Pods Statuses:  0 Running / 1 Succeeded / 0 Failed
+Pod Template:
+  Labels:  controller-uid=c86434d7-64c3-11e8-984a-06ce8005a0fc
+           job-name=pi
+  Containers:
+   pi:
+    Image:      perl
+    Port:       <none>
+    Host Port:  <none>
+    Command:
+      perl
+      -Mbignum=bpi
+      -wle
+      print bpi(2000)
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Events:
+  Type    Reason            Age   From            Message
+  ----    ------            ----  ----            -------
+  Normal  SuccessfulCreate  11m   job-controller  Created pod: pi-fgdsh
+
+
+Name:           pi.busybox
+Namespace:      default
+Selector:       controller-uid=a64eac9d-64c4-11e8-984a-06ce8005a0fc
+Labels:         controller-uid=a64eac9d-64c4-11e8-984a-06ce8005a0fc
+                job-name=pi.busybox
+Annotations:    <none>
+Parallelism:    1
+Completions:    1
+Start Time:     Thu, 31 May 2018 11:20:40 +0000
+Pods Statuses:  1 Running / 0 Succeeded / 48 Failed
+Pod Template:
+  Labels:  controller-uid=a64eac9d-64c4-11e8-984a-06ce8005a0fc
+           job-name=pi.busybox
+  Containers:
+   pi:
+    Image:      busybox
+    Port:       <none>
+    Host Port:  <none>
+    Command:
+      perl
+      -Mbignum=bpi
+      -wle
+      print bpi(2000)
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Events:
+  Type    Reason            Age               From            Message
+  ----    ------            ----              ----            -------
+  Normal  SuccessfulCreate  5m                job-controller  Created pod: pi.busybox-7jgz6
+  Normal  SuccessfulCreate  5m                job-controller  Created pod: pi.busybox-4m2xg
+  Normal  SuccessfulCreate  4m                job-controller  Created pod: pi.busybox-2tcck
+  Normal  SuccessfulCreate  4m                job-controller  Created pod: pi.busybox-sxjjb
+  Normal  SuccessfulCreate  4m                job-controller  Created pod: pi.busybox-wkb22
+  Normal  SuccessfulCreate  4m                job-controller  Created pod: pi.busybox-qwq2c
+  Normal  SuccessfulCreate  4m                job-controller  Created pod: pi.busybox-jdwmh
+  Normal  SuccessfulCreate  4m                job-controller  Created pod: pi.busybox-jd5jf
+  Normal  SuccessfulCreate  4m                job-controller  Created pod: pi.busybox-gsjwb
+  Normal  SuccessfulCreate  8s (x39 over 4m)  job-controller  (combined from similar events): Created pod: pi.busybox-zptj8
+
+
+Name:           sleep.busybox
+Namespace:      default
+Selector:       controller-uid=32b376d8-64c5-11e8-984a-06ce8005a0fc
+Labels:         controller-uid=32b376d8-64c5-11e8-984a-06ce8005a0fc
+                job-name=sleep.busybox
+Annotations:    <none>
+Parallelism:    1
+Completions:    1
+Start Time:     Thu, 31 May 2018 11:24:35 +0000
+Pods Statuses:  0 Running / 1 Succeeded / 0 Failed
+Pod Template:
+  Labels:  controller-uid=32b376d8-64c5-11e8-984a-06ce8005a0fc
+           job-name=sleep.busybox
+  Containers:
+   busybox:
+    Image:      busybox
+    Port:       <none>
+    Host Port:  <none>
+    Command:
+      sleep
+      10
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Events:
+  Type    Reason            Age   From            Message
+  ----    ------            ----  ----            -------
+  Normal  SuccessfulCreate  1m    job-controller  Created pod: sleep.busybox-jcfd5
