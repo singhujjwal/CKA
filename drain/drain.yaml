@@ -6,13 +6,12 @@ spec:
   selector:
     matchLabels:
       timeToGet: schwifty
-    replicas: 6
-    template:
-      metadata:
-        labels:
-          timeToGet: schwifty
-      spec:
-        containers:
-        - name: pickle-rick
-          image: k8s.gcr.io/pause:2.0
-          
+  replicas: 6
+  template:
+    metadata:
+      labels:
+        timeToGet: schwifty
+    spec:
+      containers:
+      - name: pickle-rick
+        image: k8s.gcr.io/pause:2.0
